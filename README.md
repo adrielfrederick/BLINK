@@ -54,7 +54,7 @@ For more detail on how to run ELQ, refer to the [ELQ README](https://github.com/
 
 (optional) It might be a good idea to use a separate conda environment. It can be created by running:
 ```
-conda create -n blink37 -y python=3.7 && conda activate blink37
+conda create -n blink38 -y python=3.8 && conda activate blink38
 pip install -r requirements.txt
 ```
 
