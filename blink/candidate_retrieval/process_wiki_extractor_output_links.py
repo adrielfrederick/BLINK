@@ -12,7 +12,6 @@ import os
 import pickle
 import sys
 import urllib.parse
-import regex
 
 parser = argparse.ArgumentParser()
 
