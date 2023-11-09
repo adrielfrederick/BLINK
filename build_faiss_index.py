@@ -38,7 +38,7 @@ def main(params):
     index.index_data(candidate_encoding.numpy())
     logger.info("Done indexing data.")
 
-    if params.get("save_index", None):
+    if params.get("output_path", None):
         index.serialize(output_path)
 
 
@@ -48,7 +48,7 @@ if __name__ == '__main__':
         "--output_path",
         required=True,
         type=str,
-        help="output file path",
+        help="Output file path. Required to save the index",
     )
     parser.add_argument(
         "--candidate_encoding",
@@ -59,10 +59,6 @@ if __name__ == '__main__':
     parser.add_argument(
         "--hnsw", action='store_true', 
         help='If enabled, use inference time efficient HNSW index',
-    )
-    parser.add_argument(
-        "--save_index", action='store_true', 
-        help='If enabled, save index',
     )
     parser.add_argument(
         '--index_buffer', type=int, default=50000,
